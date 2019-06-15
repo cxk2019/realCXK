@@ -1,0 +1,791 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic page needs
+    ============================================ -->
+    <title>病了么--哈工大最牛逼的药品销售平台</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/png" href="../static/ico/favicon-16x16.png"/>
+
+
+    <!-- Libs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="../static/css/bootstrap/css/bootstrap.min.css">
+    <link href="../static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../static/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/css/themecss/lib.css" rel="stylesheet">
+    <link href="../static/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="../static/js/minicolors/miniColors.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="../static/css/themecss/so_searchpro.css" rel="stylesheet">
+    <link href="../static/css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-categories.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-listing-tabs.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-category-slider.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-newletter-popup.css" rel="stylesheet">
+
+    <link href="../static/css/footer/footer1.css" rel="stylesheet">
+    <link href="../static/css/header/header1.css" rel="stylesheet">
+    <link id="color_scheme" href="../static/css/theme.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+     <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+         body{font-family:'Poppins', sans-serif;}
+    </style>
+
+</head>
+
+<body class="common-home res layout-1">
+
+
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    <!-- Header Container  -->
+    <header id="header" class=" typeheader-1">
+
+        <!-- Header Top -->
+        <div class="header-top hidden-compact">
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎光临 病了么 哈工大医药店&nbsp&nbsp&nbsp&nbsp<span>身体是学习的本钱</span> </div>
+                        <ul class="top-link list-inline hidden-lg ">
+                            <li class="account" id="my_account">
+                                <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">总价 </span>  <span class="fa fa-caret-down"></span>
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="register"><i class="fa fa-user"></i> 注册</a></li><!--注册-->
+                                    <li><a href="login"><i class="fa fa-pencil-square-o"></i> 登陆</a></li><!--登陆-->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Header Top -->
+
+        <!-- Header center -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="navbar-logo col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <div class="logo"><a href="index"><img src="../static/image/catalog/logo.png" title="Your Store" alt="Your Store"  /></a></div>
+                    </div>
+                    <!-- //end Logo -->
+
+
+                    <!-- Search -->
+                    <div class="col-lg-7 col-md-6 col-sm-5">
+                        <div class="search-header-w">
+                            <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+
+                            <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
+                                <form method="GET" action="index">
+                                    <div id="search0" class="search input-group form-group">
+                                        <div class="select_category filter_type  icon-select hidden-sm hidden-xs">
+                                            <select class="no-border" name="category_id">
+                                                <option value="0">全部分类</option>
+                                                <option value="78">清热解毒</option>
+                                                <option value="77">外用</option>
+                                                <option value="82">中成药</option>
+                                                <option value="80">肝胆肠胃</option>
+                                                <option value="81">心脑血管</option>
+                                                <option value="79">处方药</option>
+                                                <option value="20">养生药品</option>
+                                                <option value="76">中药药品</option>
+                                                <option value="26">保健仪器</option>
+                                            </select>
+                                        </div>
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Keyword here..." name="search">
+
+                                        <button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
+
+                                    </div>
+                                    <input type="hidden" name="route" value="product/search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //end Search -->
+                    <div class="middle-right col-lg-3 col-md-3 col-sm-3">
+                        <!--cart-->
+                        <div class="shopping_cart">
+                            <div id="cart" class="btn-shopping-cart">
+
+                                <a data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <div class="shopcart">
+                                        <span class="icon-c">
+                                <i class="fa fa-shopping-bag"></i>
+                              </span>
+                                        <div class="shopcart-inner">
+                                            <p class="text-shopping-cart">
+
+                                                俺滴购物车
+                                            </p>
+
+                                            <span class="total-shopping-cart cart-total-full">
+                                   <span class="items_cart">02</span><span class="items_cart2"> item(s)</span><span class="items_carts">( $160.00 )</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <ul class="dropdown-menu pull-right shoppingcart-box" role="menu">
+                                    <li>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product">
+                                                            <img src="../static/image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product">Yutculpa ullamco</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$80.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product">
+                                                            <img src="../static/image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product">Xancetta bresao</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$60.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td class="text-left"><strong>总价：</strong>
+                                                        </td>
+                                                        <td class="text-right">$160.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-right"> <a class="btn view-cart" href="cart"><i class="fa fa-shopping-cart"></i>查看购物车</a>&nbsp;&nbsp;&nbsp; <a class="btn btn-mega checkout-cart" href="order_information"><i class="fa fa-share"></i>结算</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--//cart-->
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- //Header center -->
+
+        <!-- Header Bottom -->
+        <div class="header-bottom hidden-compact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="bottom1 menu-vertical col-lg-2 col-md-3 col-sm-3">
+                        <div class="responsive so-megamenu megamenu-style-dev ">
+                            <div class="so-vertical-menu ">
+                                <nav class="navbar-default">
+
+                                    <div class="container-megamenu vertical">
+                                        <div id="menuHeading">
+                                            <div class="megamenuToogle-wrapper">
+                                                <div class="megamenuToogle-pattern">
+                                                    <div class="container">
+                                                        <div>
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </div>
+                                                        全部分类
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div  style="min-height: 37px" class="navbar-header">
+                                            <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
+                                                <i class="fa fa-bars"></i>
+                                                <span>  分类     </span>
+                                            </button>
+                                        </div>
+                                        <div class="vertical-wrapper" >
+                                            <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container-mega">
+                                                    <ul class="megamenu">
+                                                        <li class="item-vertical  with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico10.png" alt="icon">
+                                                                <span>清热解毒</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico1.png" alt="icon">
+                                                                <span>外用</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical  style1 with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <span class="label"></span>
+                                                                <img src="../static/image/catalog/menu/icons/ico9.png" alt="icon">
+                                                                <span>中成药</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico7.png" alt="icon">
+                                                                <span>肝胆肠胃</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical css-menu with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+
+                                                                 <img src="../static/image/catalog/menu/icons/ico6.png" alt="icon">
+                                                                <span>心脑血管</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico5.png" alt="icon">
+                                                                <span>处方药</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico4.png" alt="icon">
+                                                                <span>养生药品</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico3.png" alt="icon">
+                                                                <span>中药药材</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical" >
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico2.png" alt="icon">
+                                                                <span>保健仪器</span>
+                                                            </a>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Main menu -->
+
+                    </div>
+                    <!-- //end Main menu -->
+
+                    <div class="bottom3">
+                        <div class="telephone hidden-xs hidden-sm hidden-md">
+                            <ul class="blank">
+                                <li><a href="#"><i class="fa fa-truck"></i>查看历史订单</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square"></i>电话热线： (+123)4 567 890</a></li>
+                            </ul>
+                        </div>
+                        <div class="signin-w hidden-md hidden-sm hidden-xs">
+                            <ul class="signin-link blank">
+                                <li class="log login"><i class="fa fa-lock"></i> <a class="link-lg" href="login">登陆 </a> 或者 <a href="register">注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </header>
+    <!-- //Header Container  -->
+
+</div></body>
+<!-- Main Container  -->
+<div class="main-container container">
+    <div id="content">
+        <div class="content-top-w">
+
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 main-left">
+                <div class="module col1 hidden-sm hidden-xs"></div>
+            </div>
+
+
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 main-right">
+                <div class="slider-container row">
+
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 col2">
+                        <div class="module sohomepage-slider ">
+                            <div class="yt-content-slider"  data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1"  data-items_column3="1" data-items_column4="1" data-arrows="no" data-pagination="yes" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
+                                <div class="yt-content-slide">
+                                    <a href="#"><img src="../static/image/catalog/slideshow/home1/slider-1.jpg" alt="slider1" class="img-responsive"></a>
+                                </div>
+                                <div class="yt-content-slide">
+                                    <a href="#"><img src="../static/image/catalog/slideshow/home1/slider-2.jpg" alt="slider2" class="img-responsive"></a>
+                                </div>
+                                <div class="yt-content-slide">
+                                    <a href="#"><img src="../static/image/catalog/slideshow/home1/slider-3.jpg" alt="slider3" class="img-responsive"></a>
+                                </div>
+                            </div>
+
+                            <div class="loadeding"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col3">
+                        <div class="module product-simple extra-layout1">
+                            <h3 class="modtitle">
+                                <span>最近热卖</span>
+                            </h3>
+                            <div class="modcontent">
+                                <div id="so_extra_slider_1" class="so-extraslider" >
+                                    <!-- Begin extraslider-inner -->
+                                    <div class="yt-content-slider extraslider-inner" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                        <div class="item ">
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="product" target="_self" title="Mandouille short ">
+                                                            <img src="../static/image/catalog/demo/product/80/1.jpg" alt="Mandouille short">
+                                                            </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="product" target="_self" title="Mandouille short">Mandouille short </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$55.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$76.00 </span>&nbsp;
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="product" target="_self" title="Xancetta bresao ">
+                                                                <img src="../static/image/catalog/demo/product/80/2.jpg" alt="Xancetta bresao">
+                                                                </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="product" target="_self" title="Xancetta bresao">
+                                                                    Xancetta bresao
+                                                                </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$80.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$89.00 </span>&nbsp;
+
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="product" target="_self" title="Sausage cowbee ">
+                                                                    <img src="../static/image/catalog/demo/product/80/3.jpg" alt="Sausage cowbee">
+                                                                    </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="product" target="_self" title="Sausage cowbee">
+                                                                    Sausage cowbee
+                                                                </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    </div>
+
+                                                    <div class="content_price price">
+                                                        <span class="price product-price">
+                                                                        $66.00
+                                                                    </span>
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="#" target="_self" title="Chicken swinesha ">
+                                                                        <img src="../static/image/catalog/demo/product/80/4.jpg" alt="Chicken swinesha">
+                                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="#" target="_self" title="Chicken swinesha">
+                                                                    Chicken swinesha
+                                                                </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack">
+                                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                                        </span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$45.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$56.00 </span>&nbsp;
+
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                        </div>
+                                        <div class="item ">
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="#" target="_self" title="Qeserunt shortloin ">
+                                                        <img src="../static/image/catalog/demo/product/80/5.jpg" alt="Qeserunt shortloin">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="#" target="_self" title="Qeserunt shortloin">
+                                                Qeserunt shortloin
+                                            </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack">
+                                                <i class="fa fa-star fa-stack-2x"></i>
+                                            </span>
+                                                        <span class="fa fa-stack">
+                                                <i class="fa fa-star fa-stack-2x"></i>
+                                            </span>
+                                                        <span class="fa fa-stack">
+                                                <i class="fa fa-star fa-stack-2x"></i>
+                                            </span>
+                                                        <span class="fa fa-stack">
+                                                <i class="fa fa-star fa-stack-2x"></i>
+                                            </span>
+                                                        <span class="fa fa-stack">
+                                                <i class="fa fa-star fa-stack-2x"></i>
+                                            </span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price product-price">
+                                                    $88.00
+                                                </span>
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="#" target="_self" title="Consecte quichuck ">
+                                                        <img src="../static/image/catalog/demo/product/80/6.jpg" alt="Consecte quichuck">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="#" target="_self" title="Consecte quichuck">
+                                                Consecte quichuck
+                                            </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                </span>
+                                                        <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                </span>
+                                                        <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                </span>
+                                                        <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                </span>
+                                                        <span class="fa fa-stack">
+                                                    <i class="fa fa-star fa-stack-2x"></i>
+                                                </span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$55.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$61.00 </span>&nbsp;
+
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="#" target="_self" title="Neatball bresaola ">
+                                                    <img src="../static/image/catalog/demo/product/80/7.jpg" alt="Neatball bresaola">
+                                                    </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="#" target="_self" title="Neatball bresaola">
+                                                Neatball bresaola
+                                            </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack">
+                                                        <i class="fa fa-star fa-stack-2x"></i>
+                                                    </span>
+                                                        <span class="fa fa-stack">
+                                                        <i class="fa fa-star fa-stack-2x"></i>
+                                                    </span>
+                                                        <span class="fa fa-stack">
+                                                        <i class="fa fa-star fa-stack-2x"></i>
+                                                    </span>
+                                                        <span class="fa fa-stack">
+                                                        <i class="fa fa-star fa-stack-2x"></i>
+                                                    </span>
+                                                        <span class="fa fa-stack">
+                                                        <i class="fa fa-star fa-stack-2x"></i>
+                                                    </span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$65.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$71.00 </span>&nbsp;
+
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                            <div class="product-layout item-inner style1 ">
+                                                <div class="item-image">
+                                                    <div class="item-img-info">
+                                                        <a href="#" target="_self" title="Yutculpa ullamco ">
+                                                        <img src="../static/image/catalog/demo/product/80/8.jpg" alt="Yutculpa ullamco">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="item-info">
+                                                    <div class="item-title">
+                                                        <a href="#" target="_self" title="Yutculpa ullamco">
+                                                            Yutculpa ullamco
+                                                        </a>
+                                                    </div>
+                                                    <div class="rating">
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                        </span>
+                                                        <span class="fa fa-stack">
+                                                            <i class="fa fa-star fa-stack-2x"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="content_price price">
+                                                        <span class="price-new product-price">$60.00 </span>&nbsp;&nbsp;
+
+                                                        <span class="price-old">$77.00 </span>&nbsp;
+
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- End item-info -->
+                                                <!-- End item-wrap-inner -->
+                                            </div>
+                                            <!-- End item-wrap -->
+                                        </div>
+                                    </div>
+                                    <!--End extraslider-inner -->
+                                </div>
+                            </div>
+                        </div><!--bestselling-->
+                    </div>
+
+                </div>
+            </div>
+                    <!--//导航栏下的第一部分-->
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<!-- Include Libs & Plugins
+============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="../static/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="../static/js/slick-slider/slick.js"></script>
+<script type="text/javascript" src="../static/js/themejs/libs.js"></script>
+<script type="text/javascript" src="../static/js/unveil/jquery.unveil.js"></script>
+<script type="text/javascript" src="../static/js/countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="../static/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+<script type="text/javascript" src="../static/js/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="../static/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/modernizr/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="../static/js/minicolors/jquery.miniColors.min.js"></script>
+
+<!-- Theme files
+============================================ -->
+
+<script type="text/javascript" src="../static/js/themejs/application.js"></script>
+
+<script type="text/javascript" src="../static/js/themejs/homepage.js"></script>
+
+<script type="text/javascript" src="../static/js/themejs/toppanel.js"></script>
+<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
+<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>
+
+
+
+
+</body>
+</html>
