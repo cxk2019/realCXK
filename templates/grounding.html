@@ -1,15 +1,15 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:height="http://www.w3.org/1999/xhtml">
 <head>
 
     <!-- Basic page needs
     ============================================ -->
-    <title>病了么-登录</title>
+    <title>病了么-添加药品</title>
     <meta charset="utf-8">
-    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
-    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
-    <meta name="author" content="Magentech">
+    <meta name="keywords" content="administrator,grounding" />
+    <meta name="description" content="Administrator ground the medicine." />
+    <meta name="author" content="Gorma">
     <meta name="robots" content="index, follow" />
 
     <!-- Mobile specific metas
@@ -54,7 +54,8 @@
 
 </head>
 
-<body class="res layout-1 layout-subpage">
+<body class="res layout-1">
+
 
     <div id="wrapper" class="wrapper-fluid banners-effect-5">
 
@@ -374,56 +375,129 @@
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">账户</a></li>
-			<li><a href="#">登录</a></li>
+			<li><a href="#">上架药品</a></li>
 		</ul>
 
 		<div class="row">
-			<div id="content" class="col-sm-12">
-				<div class="page-login">
+			<!--Middle Part Start-->
+			<div id="content" class="col-sm-9">
+				<h2 class="title">上架药品</h2>
+				<p>输入上架药品的详细信息。</p>
 
-					<div class="account-border">
-						<div class="row">
-							<div class="col-sm-6 new-customer">
-								<div class="well">
-									<h2><i class="fa fa-file-o" aria-hidden="true"></i> 新用户</h2>
-									<p>如果您还没有账号，您可以立即注册，享受病了么平台最优惠便利的网上购药服务。</p>
-								</div>
-								<div class="bottom-form">
-									<a href="register.html" class="btn btn-default pull-right">注册</a>
-								</div>
-							</div>
+				<form class="form-horizontal">
+					<div class="form-group required">
+						<label for="input-medicine-name" class="col-sm-2 control-label">药品名称</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-name" value="" name="medicine_name">
+						</div>
+					</div>
+					<div class="form-group required">
 
-							<form action="#" method="post" enctype="multipart/form-data">
-								<div class="col-sm-6 customer-login">
-									<div class="well">
-										<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> 用户登录</h2>
-										<p><strong>如果您已拥有一个账号，请在此登录。</strong></p>
-										<div class="form-group">
-											<label class="control-label " for="input-email">电子邮箱地址/用户名</label>
-											<input type="text" name="email" value="" id="input-email" class="form-control" />
-										</div>
-										<div class="form-group">
-											<label class="control-label " for="input-password">密码</label>
-											<input type="password" name="password" value="" id="input-password" class="form-control" />
-										</div>
-									</div>
-									<div class="bottom-form">
-										<a href="#" class="forgot">忘记密码？</a>
-										<input type="submit" value="Login" class="btn btn-default pull-right" />
-									</div>
-								</div>
-							</form>
+						<label for="input-medicine-category" class="col-sm-2 control-label">药品类别</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="input-medicine-category">
+                                <option value ="中药">中药</option>
+                                <option value ="西药">西药</option>
+                            </select>
 						</div>
 					</div>
 
-				</div>
+					<div class="form-group required">
+						<label for="input-medicine-brand" class="col-sm-2 control-label">品　　牌</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-brand" value="" name="medicine_brand">
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="input-medicine_specification" class="col-sm-2 control-label">规　　格</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine_specification" value="" name="medicine_specification">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-manufacturer" class="col-sm-2 control-label">生产厂商</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-manufacturer" value="" name="medicine-manufacturer">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-approvalnum" class="col-sm-2 control-label">批准文号</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-approvalnum" value="" name="medicine-approvalnum">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-component" class="col-sm-2 control-label">药品成分</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-component" value="" name="medicine-component">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-function" class="col-sm-2 control-label">功能主治</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-function" value="" name="medicine-fuction">
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-sm-2 control-label">产品类型</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label>
+									<input type="radio" value="8" name="prescription"> 处方药
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" value="7" name="prescription"> 非处方药
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label for="input-medicine-description" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Optional">药品描述</span>
+						</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" id="input-medicine-description" rows="5" cols="40" name="medicine-description"></textarea>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="input-medicine-amount" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="药品库存量">库存</span>
+						</label>
+						<div class="col-sm-10">
+							<input type="text" size="5" class="form-control" id="input-medicine-amount" value="" name="amount">
+						</div>
+					</div>
+					<div class="buttons clearfix">
+						<div class="pull-right">我确认上架的药品信息是符合国家法律法规并且准确无误的　
+							<input type="checkbox" value="1" name="agree"> &nbsp;
+							<input type="submit" class="btn btn-primary" value="提交">
+						</div>
+					</div>
+				</form>
 			</div>
+			<!--Middle Part End-->
+			<!--Right Part Start -->
+			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
+				<h2 class="subtitle">平台管理</h2>
+				<div class="list-group">
+					<ul class="list-item">
+						<li><a href="grounding.html">上架药品</a>
+						</li>
+						<li><a href="delete.html">下架药品</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<!--Right Part End -->
 		</div>
 	</div>
 	<!-- //Main Container -->
 
     </div>
+
+
 
 <!-- Include Libs & Plugins
 	============================================ -->
@@ -448,8 +522,5 @@
 	<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
 	<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>
 	<script type="text/javascript" src="../static/js/themejs/application.js"></script>
-
-
-
 </body>
 </html>

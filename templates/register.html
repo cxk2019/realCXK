@@ -5,7 +5,7 @@
 
     <!-- Basic page needs
     ============================================ -->
-    <title>病了么-登录</title>
+    <title>病了么-注册</title>
     <meta charset="utf-8">
     <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
     <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
@@ -55,6 +55,7 @@
 </head>
 
 <body class="res layout-1 layout-subpage">
+
 
     <div id="wrapper" class="wrapper-fluid banners-effect-5">
 
@@ -369,61 +370,327 @@
     </header>
     <!-- //Header Container  -->
 
-
 	<!-- Main Container  -->
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">账户</a></li>
-			<li><a href="#">登录</a></li>
+			<li><a href="#">账号</a></li>
+			<li><a href="#">注册</a></li>
 		</ul>
 
 		<div class="row">
 			<div id="content" class="col-sm-12">
-				<div class="page-login">
-
-					<div class="account-border">
-						<div class="row">
-							<div class="col-sm-6 new-customer">
-								<div class="well">
-									<h2><i class="fa fa-file-o" aria-hidden="true"></i> 新用户</h2>
-									<p>如果您还没有账号，您可以立即注册，享受病了么平台最优惠便利的网上购药服务。</p>
-								</div>
-								<div class="bottom-form">
-									<a href="register.html" class="btn btn-default pull-right">注册</a>
-								</div>
+				<h2 class="title">注册账号</h2>
+				<p>如果你已拥有一个账号，请点击此处进入 <a href="#">登录界面</a>.</p>
+				<form action="" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                    <fieldset>
+						<legend>账号信息</legend>
+                        <div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-user">用户名</label>
+							<div class="col-sm-10">
+								<input type="text" name="user" value="" placeholder="用户名" id="input-user" class="form-control">
 							</div>
-
-							<form action="#" method="post" enctype="multipart/form-data">
-								<div class="col-sm-6 customer-login">
-									<div class="well">
-										<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> 用户登录</h2>
-										<p><strong>如果您已拥有一个账号，请在此登录。</strong></p>
-										<div class="form-group">
-											<label class="control-label " for="input-email">电子邮箱地址/用户名</label>
-											<input type="text" name="email" value="" id="input-email" class="form-control" />
-										</div>
-										<div class="form-group">
-											<label class="control-label " for="input-password">密码</label>
-											<input type="password" name="password" value="" id="input-password" class="form-control" />
-										</div>
-									</div>
-									<div class="bottom-form">
-										<a href="#" class="forgot">忘记密码？</a>
-										<input type="submit" value="Login" class="btn btn-default pull-right" />
-									</div>
-								</div>
-							</form>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-password">密码</label>
+							<div class="col-sm-10">
+								<input type="password" name="password" value="" placeholder="密码" id="input-password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-confirm">确认密码</label>
+							<div class="col-sm-10">
+								<input type="password" name="confirm" value="" placeholder="确认密码" id="input-confirm" class="form-control">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset id="account">
+						<legend>个人信息</legend>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-firstname">姓名</label>
+							<div class="col-sm-10">
+								<input type="text" name="firstname" value="" placeholder="姓名" id="input-firstname" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-email">E-Mail</label>
+							<div class="col-sm-10">
+								<input type="email" name="email" value="" placeholder="E-Mail" id="input-email" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-telephone">电话号码</label>
+							<div class="col-sm-10">
+								<input type="tel" name="telephone" value="" placeholder="电话号码" id="input-telephone" class="form-control">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset id="地址">
+						<legend>地址</legend>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-address-1">地址</label>
+							<div class="col-sm-10">
+								<input type="text" name="address_1" value="" placeholder="地址" id="input-address-1" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-address-telephone">联系电话</label>
+							<div class="col-sm-10">
+								<input type="tel" name="address-telephone" value="" placeholder="联系电话" id="input-address-telephone" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-postcode">邮政编码</label>
+							<div class="col-sm-10">
+								<input type="text" name="postcode" value="" placeholder="邮政编码" id="input-postcode" class="form-control">
+							</div>
+						</div>
+						<div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-province">省份</label>
+							<div class="col-sm-10">
+								<select name="province_id" id="input-province" class="form-control">
+									<option value=""> --- 请选择省份 --- </option>
+									<option value="244">北京</option>
+									<option value="1">上海</option>
+									<option value="2">天津</option>
+									<option value="3">山东</option>
+								</select>
+							</div>
+						</div>
+                        <div class="form-group required">
+							<label class="col-sm-2 control-label" for="input-city">城市</label>
+							<div class="col-sm-10">
+								<select name="city_id" id="input-city" class="form-control">
+									<option value=""> --- 请选择城市 --- </option>
+									<option value="244">济南</option>
+									<option value="1">青岛</option>
+									<option value="2">烟台</option>
+									<option value="3">威海</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<div class="buttons">
+						<div class="pull-right">我已详细阅读并同意遵守<a href="#" class="agree"><b>病了么用户准则</b></a>
+							<input class="box-checkbox" type="checkbox" name="agree" value="1"> &nbsp;
+							<input type="submit" value="提交" class="btn btn-primary">
 						</div>
 					</div>
-
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
 	<!-- //Main Container -->
 
+
+	<!-- Footer Container -->
+    <footer class="footer-container typefooter-1">
+        <!-- Footer Top Container -->
+
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="socials-w">
+                          <h2>Follow socials</h2>
+                          <ul class="socials">
+                            <li class="facebook"><a href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                            <li class="twitter"><a href="https://twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                            <li class="google_plus"><a href="https://plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                            <li class="pinterest"><a href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                            <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
+                            <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                            <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                          </ul>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="module newsletter-footer1">
+                            <div class="newsletter">
+
+                                <div class="title-block">
+                                    <div class="page-heading font-title">
+                                        Signup for Newsletter
+                                    </div>
+
+                                </div>
+
+                                <div class="block_content">
+                                    <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
+                                        <div class="form-group">
+                                            <div class="input-box">
+                                                <input type="email" placeholder="Your email address..." value="" class="form-control" id="txtemail" name="txtemail" size="55">
+                                            </div>
+                                            <div class="subcribe">
+                                                <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
+                                            Subscribe
+                                        </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                                <!--/.modcontent-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- /Footer Top Container -->
+
+        <div class="footer-middle ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-infos">
+                        <div class="infos-footer">
+                            <a href="#"><img src="../static/image/catalog/logo-footer.png" alt="image"></a>
+                            <ul class="menu">
+                                <li class="adres">
+                                    San Luis potosí, centro historico, 78000 san luis potosí, SPL, Mexico
+                                </li>
+                                <li class="phone">
+                                    (+0214)0 315 215 - (+0214)0 315 215
+                                </li>
+                                <li class="mail">
+                                    <a href="mailto:contact@opencartworks.com">contact@opencartworks.com</a>
+                                </li>
+                                <li class="time">
+                                    Open time: 8:00AM - 6:00PM
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                        <div class="box-information box-footer">
+                            <div class="module clearfix">
+                                <h3 class="modtitle">Information</h3>
+                                <div class="modcontent">
+                                    <ul class="menu">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Warranty And Services</a></li>
+                                        <li><a href="#">Support 24/7 page</a></li>
+                                        <li><a href="#">Product Registration</a></li>
+                                        <li><a href="#">Product Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                        <div class="box-account box-footer">
+                            <div class="module clearfix">
+                                <h3 class="modtitle">My Account</h3>
+                                <div class="modcontent">
+                                    <ul class="menu">
+                                        <li><a href="#">Brands</a></li>
+                                        <li><a href="#">Gift Certificates</a></li>
+                                        <li><a href="#">Affiliates</a></li>
+                                        <li><a href="#">Specials</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Custom Link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-clear">
+                        <div class="box-service box-footer">
+                          <div class="module clearfix">
+                            <h3 class="modtitle">Categories</h3>
+                            <div class="modcontent">
+                              <ul class="menu">
+                                <li><a href="#">Event & Party Supplies</a></li>
+                                <li><a href="#">Home Improvement</a></li>
+                                <li><a href="#">Lamps & Light Fixtures</a></li>
+                                <li><a href="#">Kitchen & Bath Fixtures</a></li>
+                                <li><a href="#">Customer Service</a></li>
+                                <li><a href="#">Kitchen & Dining</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                        <div class="box-service box-footer">
+                            <div class="module clearfix">
+                                <h3 class="modtitle">Services</h3>
+                                <div class="modcontent">
+                                    <ul class="menu">
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Support</a></li>
+                                        <li><a href="#">Site Map</a></li>
+                                        <li><a href="#">Customer Service</a></li>
+                                        <li><a href="#">Custom Link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 col-style">
+                        <div class="box-service box-footer">
+                          <div class="module clearfix">
+                            <h3 class="modtitle">Categories</h3>
+                            <div class="modcontent">
+                              <ul class="menu">
+                                <li><a href="#">Event & Party Supplies</a></li>
+                                <li><a href="#">Home Improvement</a></li>
+                                <li><a href="#">Lamps & Light Fixtures</a></li>
+                                <li><a href="#">Kitchen & Bath Fixtures</a></li>
+                                <li><a href="#">Customer Service</a></li>
+                                <li><a href="#">Kitchen & Dining</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                        <div class="footer-b">
+                            <div class="bottom-cont">
+                                <a href="#"><img src="../static/image/catalog/demo/payment/pay1.jpg" alt="image"></a>
+                                <ul class="footer-links">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="#">Orders and Returns</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                                <p>**$50 off orders $350+ with the code BOO50. $75 off orders $500+ with the code BOO75. $150 off orders $1000+ with the code BOO150. Valid from October 28, 2016 to October 31, 2016. Offer may not be combined with any other offers or promotions, is non-exchangeable and non-refundable. Offer valid within the US only.</p>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+
+            <!--Back To Top-->
+        <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+    </footer>
+    <!-- //end Footer Container -->
+
     </div>
+
+
 
 <!-- Include Libs & Plugins
 	============================================ -->
@@ -448,8 +715,6 @@
 	<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
 	<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>
 	<script type="text/javascript" src="../static/js/themejs/application.js"></script>
-
-
 
 </body>
 </html>

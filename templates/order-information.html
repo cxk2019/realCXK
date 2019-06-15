@@ -5,7 +5,7 @@
 
     <!-- Basic page needs
     ============================================ -->
-    <title>病了么-登录</title>
+    <title>病了么-订单详情</title>
     <meta charset="utf-8">
     <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
     <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
@@ -56,10 +56,9 @@
 
 <body class="res layout-1 layout-subpage">
 
+
     <div id="wrapper" class="wrapper-fluid banners-effect-5">
-
-
-    <!-- Header Container  -->
+   <!-- Header Container  -->
     <header id="header" class=" typeheader-1">
 
         <!-- Header Top -->
@@ -369,61 +368,120 @@
     </header>
     <!-- //Header Container  -->
 
+</div></body>
+
 
 	<!-- Main Container  -->
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">账户</a></li>
-			<li><a href="#">登录</a></li>
+			<li><a href="#">订单详情</a></li>
 		</ul>
 
 		<div class="row">
-			<div id="content" class="col-sm-12">
-				<div class="page-login">
+			<!--Middle Part Start-->
+			<div id="content" class="col-sm-9">
+				<h2 class="title">订单详情</h2>
 
-					<div class="account-border">
-						<div class="row">
-							<div class="col-sm-6 new-customer">
-								<div class="well">
-									<h2><i class="fa fa-file-o" aria-hidden="true"></i> 新用户</h2>
-									<p>如果您还没有账号，您可以立即注册，享受病了么平台最优惠便利的网上购药服务。</p>
-								</div>
-								<div class="bottom-form">
-									<a href="register.html" class="btn btn-default pull-right">注册</a>
-								</div>
-							</div>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<td colspan="2" class="text-left">订单信息</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="width: 50%;" class="text-left"> <b>生产批号: </b> Z44020913
+								<br>
+								<b>订单日期：</b>2019/6/5</td>
+							<td style="width: 50%;" class="text-left"> <b>支付方式: </b> 支付宝
+								<br>
+								<b>配送方式：</b>顺丰快递</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<td style="width: 100%; vertical-align: top;" class="text-left">收货地址</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-left">席文玉
+								<br>山东省威海市
+								<br>文化西路
+								<br>哈尔滨工业大学威海校区 菜鸟驿站</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<td class="text-left">药品名称</td>
+								<td class="text-left">药品类型</td>
+								<td class="text-right">药品数量</td>
+								<td class="text-right">药品价格</td>
+								<td class="text-right">总价</td>
+								<td style="width: 20px;"></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-left">999感冒灵颗粒 </td>
+								<td class="text-left">感冒伤风药</td>
+								<td class="text-right">1</td>
+								<td class="text-right">￥12.30</td>
+								<td class="text-right">￥12.30</td>
+								<td style="white-space: nowrap;" class="text-right"> <a class="btn btn-primary" title="" data-toggle="tooltip" href="#" data-original-title="再次下单"><i class="fa fa-shopping-cart"></i></a>
+									<a class="btn btn-danger" title="" data-toggle="tooltip" href="return.html" data-original-title="申请售后"><i class="fa fa-reply"></i></a>
+								</td>
+							</tr>
 
-							<form action="#" method="post" enctype="multipart/form-data">
-								<div class="col-sm-6 customer-login">
-									<div class="well">
-										<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> 用户登录</h2>
-										<p><strong>如果您已拥有一个账号，请在此登录。</strong></p>
-										<div class="form-group">
-											<label class="control-label " for="input-email">电子邮箱地址/用户名</label>
-											<input type="text" name="email" value="" id="input-email" class="form-control" />
-										</div>
-										<div class="form-group">
-											<label class="control-label " for="input-password">密码</label>
-											<input type="password" name="password" value="" id="input-password" class="form-control" />
-										</div>
-									</div>
-									<div class="bottom-form">
-										<a href="#" class="forgot">忘记密码？</a>
-										<input type="submit" value="Login" class="btn btn-default pull-right" />
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-
+						</tbody>
+					</table>
 				</div>
+				<h3>订单历史</h3>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<td class="text-left">日期记录</td>
+							<td class="text-left">订单状态</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-left">2019/6/5</td>
+							<td class="text-left">药品发货</td>
+						</tr>
+						<tr>
+							<td class="text-left">2019/6/13</td>
+							<td class="text-left">药品送达</td>
+						</tr>
+						<tr>
+							<td class="text-left">2019/6/15</td>
+							<td class="text-left">订单完成</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="buttons clearfix">
+					<div class="pull-right"><a class="btn btn-primary" href="#">继续浏览</a>
+					</div>
+				</div>
+
+
+
 			</div>
+			<!--Middle Part End-->
+
 		</div>
 	</div>
 	<!-- //Main Container -->
 
+
     </div>
+
 
 <!-- Include Libs & Plugins
 	============================================ -->
