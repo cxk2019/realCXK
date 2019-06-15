@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^quickview$', view.quickview),
     url(r'^register$', view.register),
     url(r'^login$', view.login),
+    url(r'^product$', view.product)
 ]
