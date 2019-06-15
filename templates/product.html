@@ -1,0 +1,813 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic page needs
+    ============================================ -->
+    <title>SuperMarket - Multipurpose Responsive HTML5 Template</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="../static/image/png" href="ico/favicon-16x16.png"/>
+
+
+    <!-- Libs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="../static/css/bootstrap/css/bootstrap.min.css">
+    <link href="../static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../static/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/css/themecss/lib.css" rel="stylesheet">
+    <link href="../static/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="../static/js/minicolors/miniColors.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="../static/css/themecss/so_searchpro.css" rel="stylesheet">
+    <link href="../static/css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-categories.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-listing-tabs.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-category-slider.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-newletter-popup.css" rel="stylesheet">
+
+    <link href="../static/css/footer/footer1.css" rel="stylesheet">
+    <link href="../static/css/header/header1.css" rel="stylesheet">
+    <link id="color_scheme" href="../static/css/theme.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+     <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+         body{font-family:'Poppins', sans-serif;}
+    </style>
+
+</head>
+
+<body class="res layout-subpage layout-1 banners-effect-5">
+
+
+    <div id="wrapper" class="wrapper-fluid">
+
+      <!-- Header Container  -->
+    <header id="header" class=" typeheader-1">
+
+        <!-- Header Top -->
+        <div class="header-top hidden-compact">
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎光临 病了么 哈工大医药店&nbsp&nbsp&nbsp&nbsp<span>身体是学习的本钱</span> </div>
+                        <ul class="top-link list-inline hidden-lg ">
+                            <li class="account" id="my_account">
+                                <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">总价 </span>  <span class="fa fa-caret-down"></span>
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="register.html"><i class="fa fa-user"></i> 注册</a></li><!--注册-->
+                                    <li><a href="login.html"><i class="fa fa-pencil-square-o"></i> 登陆</a></li><!--登陆-->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Header Top -->
+
+        <!-- Header center -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="navbar-logo col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <div class="logo"><a href="index.html"><img src="../static/image/catalog/logo.png" title="Your Store" alt="Your Store"  /></a></div>
+                    </div>
+                    <!-- //end Logo -->
+
+
+                    <!-- Search -->
+                    <div class="col-lg-7 col-md-6 col-sm-5">
+                        <div class="search-header-w">
+                            <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+
+                            <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
+                                <form method="GET" action="index.html">
+                                    <div id="search0" class="search input-group form-group">
+                                        <div class="select_category filter_type  icon-select hidden-sm hidden-xs">
+                                            <select class="no-border" name="category_id">
+                                                <option value="0">全部分类</option>
+                                                <option value="78">清热解毒</option>
+                                                <option value="77">外用</option>
+                                                <option value="82">中成药</option>
+                                                <option value="80">肝胆肠胃</option>
+                                                <option value="81">心脑血管</option>
+                                                <option value="79">处方药</option>
+                                                <option value="20">养生药品</option>
+                                                <option value="76">中药药品</option>
+                                                <option value="26">保健仪器</option>
+                                            </select>
+                                        </div>
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Keyword here..." name="search">
+
+                                        <button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
+
+                                    </div>
+                                    <input type="hidden" name="route" value="product/search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //end Search -->
+                    <div class="middle-right col-lg-3 col-md-3 col-sm-3">
+                        <!--cart-->
+                        <div class="shopping_cart">
+                            <div id="cart" class="btn-shopping-cart">
+
+                                <a data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <div class="shopcart">
+                                        <span class="icon-c">
+                                <i class="fa fa-shopping-bag"></i>
+                              </span>
+                                        <div class="shopcart-inner">
+                                            <p class="text-shopping-cart">
+
+                                                俺滴购物车
+                                            </p>
+
+                                            <span class="total-shopping-cart cart-total-full">
+                                   <span class="items_cart">02</span><span class="items_cart2"> item(s)</span><span class="items_carts">( $160.00 )</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <ul class="dropdown-menu pull-right shoppingcart-box" role="menu">
+                                    <li>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="../static/image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Yutculpa ullamco</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$80.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="../static/image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Xancetta bresao</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$60.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td class="text-left"><strong>总价：</strong>
+                                                        </td>
+                                                        <td class="text-right">$160.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-right"> <a class="btn view-cart" href="cart.html"><i class="fa fa-shopping-cart"></i>查看购物车</a>&nbsp;&nbsp;&nbsp; <a class="btn btn-mega checkout-cart" href="checkout.html"><i class="fa fa-share"></i>结算</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--//cart-->
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- //Header center -->
+
+        <!-- Header Bottom -->
+        <div class="header-bottom hidden-compact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="bottom1 menu-vertical col-lg-2 col-md-3 col-sm-3">
+                        <div class="responsive so-megamenu megamenu-style-dev ">
+                            <div class="so-vertical-menu ">
+                                <nav class="navbar-default">
+
+                                    <div class="container-megamenu vertical">
+                                        <div id="menuHeading">
+                                            <div class="megamenuToogle-wrapper">
+                                                <div class="megamenuToogle-pattern">
+                                                    <div class="container">
+                                                        <div>
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </div>
+                                                        全部分类
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="navbar-header">
+                                            <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
+                                                <i class="fa fa-bars"></i>
+                                                <span>  分类     </span>
+                                            </button>
+                                        </div>
+                                        <div class="vertical-wrapper" >
+                                            <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container-mega">
+                                                    <ul class="megamenu">
+                                                        <li class="item-vertical  with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico10.png" alt="icon">
+                                                                <span>清热解毒</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico1.png" alt="icon">
+                                                                <span>外用</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical  style1 with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <span class="label"></span>
+                                                                <img src="../static/image/catalog/menu/icons/ico9.png" alt="icon">
+                                                                <span>中成药</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico7.png" alt="icon">
+                                                                <span>肝胆肠胃</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical css-menu with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+
+                                                                 <img src="../static/image/catalog/menu/icons/ico6.png" alt="icon">
+                                                                <span>心脑血管</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico5.png" alt="icon">
+                                                                <span>处方药</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico4.png" alt="icon">
+                                                                <span>养生药品</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico3.png" alt="icon">
+                                                                <span>中药药材</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical" >
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico2.png" alt="icon">
+                                                                <span>保健仪器</span>
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Main menu -->
+
+                    </div>
+                    <!-- //end Main menu -->
+
+                    <div class="bottom3">
+                        <div class="telephone hidden-xs hidden-sm hidden-md">
+                            <ul class="blank">
+                                <li><a href="#"><i class="fa fa-truck"></i>查看历史订单</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square"></i>电话热线： (+123)4 567 890</a></li>
+                            </ul>
+                        </div>
+                        <div class="signin-w hidden-md hidden-sm hidden-xs">
+                            <ul class="signin-link blank">
+                                <li class="log login"><i class="fa fa-lock"></i> <a class="link-lg" href="login.html">登陆 </a> 或者 <a href="register.html">注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+    </header>
+    <!-- //Header Container  -->
+
+
+	<!-- Main Container  -->
+	<div class="main-container container">
+		<ul class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i></a></li>
+			<li><a href="#">Smartphone & Tablets</a></li>
+			<li><a href="#">Chicken swinesha</a></li>
+		</ul>
+
+		<div class="row">
+
+			<!--Middle Part Start-->
+			<div id="content" class="col-md-9 col-sm-8">
+
+				<div class="product-view">
+					<div class="left-content-product">
+						<div class="row">
+							<div class="content-product-left col-md-6 col-sm-12 col-xs-12">
+								<div id="thumb-slider-vertical" class="thumb-vertical-outer">
+									<!-- <span class="btn-more prev-thumb nt"><i class="fa fa-angle-up"></i></span>
+									<span class="btn-more next-thumb nt"><i class="fa fa-angle-down"></i></span> -->
+									<ul class="thumb-vertical">
+										<li class="owl2-item">
+											<a data-index="0" class="img thumbnail" data-image="../static/image/catalog/demo/product/fashion/1.jpg" title="Canon EOS 5D">
+												<img src="../static/image/catalog/demo/product/fashion/1.jpg" title="Canon EOS 5D" alt="Canon EOS 5D">
+											</a>
+										</li>
+										<li class="owl2-item">
+											<a data-index="1" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/2.jpg" title="Chicken swinesha">
+												<img src="../static/image/catalog/demo/product/fashion/2.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+											</a>
+										</li>
+										<li class="owl2-item">
+											<a data-index="2" class="img thumbnail" data-image="../static/image/catalog/demo/product/fashion/3.jpg" title="Chicken swinesha">
+												<img src="../static/image/catalog/demo/product/fashion/3.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+											</a>
+										</li>
+										<li class="owl2-item">
+											<a data-index="3" class="img thumbnail" data-image="../static/image/catalog/demo/product/fashion/4.jpg" title="Chicken swinesha">
+												<img src="../static/image/catalog/demo/product/fashion/4.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+											</a>
+										</li>
+										<li class="owl2-item">
+											<a data-index="3" class="img thumbnail" data-image="../static/image/catalog/demo/product/fashion/5.jpg" title="Chicken swinesha">
+												<img src="../static/image/catalog/demo/product/fashion/5.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+											</a>
+										</li>
+									</ul>
+
+
+								</div>
+								<div class="large-image  vertical">
+									<img itemprop="image" class="product-image-zoom" src="../static/image/catalog/demo/product/fashion/1.jpg" data-zoom-image="../static/image/catalog/demo/product/fashion/1.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								</div>
+								<a class="thumb-video pull-left" href="https://www.youtube.com/watch?v=HhabgvIIXik"><i class="fa fa-youtube-play"></i></a>
+
+							</div>
+
+							<div class="content-product-right col-md-6 col-sm-12 col-xs-12">
+								<div class="title-product">
+									<h1>Chicken swinesha</h1>
+								</div>
+								<!-- Review ---->
+								<div class="box-review form-group">
+									<div class="ratings">
+										<div class="rating-box">
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+										</div>
+									</div>
+
+									<a class="reviews_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">0 reviews</a>	|
+									<a class="write_review_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">Write a review</a>
+								</div>
+
+								<div class="product-label form-group">
+									<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+										<span class="price-new" itemprop="price">$114.00</span>
+										<span class="price-old">$122.00</span>
+									</div>
+									<div class="stock"><span>Availability:</span> <span class="status-stock">In Stock</span></div>
+								</div>
+
+								<div class="product-box-desc">
+									<div class="inner-box-desc">
+										<div class="price-tax"><span>Ex Tax:</span> $60.00</div>
+										<div class="reward"><span>Price in reward points:</span> 400</div>
+										<div class="brand"><span>Brand:</span><a href="#">Apple</a>		</div>
+										<div class="model"><span>Product Code:</span> Product 15</div>
+										<div class="reward"><span>Reward Points:</span> 100</div>
+									</div>
+								</div>
+
+								<div class="short_description form-group">
+									<h4>OverView</h4>
+									The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provid...
+								</div>
+								<div id="product">
+									<h4>Available Options</h4>
+									<div class="image_option_type form-group required">
+										<label class="control-label">Colors</label>
+										<ul class="product-options clearfix"id="input-option231">
+											<li class="radio active">
+												<label>
+													<input class="image_radio" type="radio" name="option[231]" value="33"> <img src="../static/image/demo/colors/blue.jpg"
+													data-original-title="blue +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+													<label> </label>
+												</label>
+											</li>
+											<li class="radio">
+												<label>
+													<input class="image_radio" type="radio" name="option[231]" value="34"> <img src="../static/image/demo/colors/brown.jpg"
+													data-original-title="brown -$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+													<label> </label>
+												</label>
+											</li>
+											<li class="radio">
+												<label>
+													<input class="image_radio" type="radio" name="option[231]" value="35"> <img src="../static/image/demo/colors/green.jpg"
+													data-original-title="green +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+													<label> </label>
+												</label>
+											</li>
+											<li class="selected-option">
+											</li>
+										</ul>
+									</div>
+
+
+
+									<div class="form-group box-info-product">
+										<div class="option quantity">
+											<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
+												<label>Qty</label>
+												<input class="form-control" type="text" name="quantity"
+												value="1">
+												<input type="hidden" name="product_id" value="50">
+												<span class="input-group-addon product_quantity_down">−</span>
+												<span class="input-group-addon product_quantity_up">+</span>
+											</div>
+										</div>
+										<div class="cart">
+											<input type="button" data-toggle="tooltip" title="" value="Add to Cart" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" onclick="cart.add('42', '1');" data-original-title="Add to Cart">
+										</div>
+
+
+									</div>
+
+								</div>
+								<!-- end box info product -->
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<!-- Product Tabs -->
+				<div class="producttab ">
+					<div class="tabsslider horizontal-tabs  col-xs-12">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#tab-1">Description</a></li>
+							<li class="item_nonactive"><a data-toggle="tab" href="#tab-review">Reviews (1)</a></li>
+							<li class="item_nonactive"><a data-toggle="tab" href="#tab-4">Tags</a></li>
+							<li class="item_nonactive"><a data-toggle="tab" href="#tab-5">Custom Tab</a></li>
+						</ul>
+						<div class="tab-content col-xs-12">
+							<div id="tab-1" class="tab-pane fade active in">
+								<p>
+									The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there's no limit to what you can achieve. <br>
+									<br>
+									The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it's designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. <br>
+									<br>
+									Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple's ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. <br>
+									<br>
+									Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. <br>
+									<br>
+									The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.<br>
+							  </p>
+								<h3>
+									Features:</h3>
+								<p>
+									Unrivaled display performance</p>
+								<ul>
+									<li>
+										30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.</li>
+									<li>
+										Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.</li>
+									<li>
+										Wide-format design for simultaneous display of two full pages of text and graphics.</li>
+									<li>
+										Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks</li>
+									<li>
+										Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.</li>
+									<li>
+										Lightning-fast pixel response for full-motion digital video playback.</li>
+									<li>
+										Support for 16.7 million saturated colors, for use in all graphics-intensive applications.</li>
+								</ul>
+								<p>
+									Simple setup and operation</p>
+								<ul>
+									<li>
+										Single cable with elegant breakout for connection to DVI, USB and FireWire ports</li>
+									<li>
+										Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.</li>
+									<li>
+										Two FireWire 400 ports to support iSight and other desktop peripherals</li>
+								</ul>
+								<p>
+									Sleek, elegant design</p>
+								<ul>
+									<li>
+										Huge virtual workspace, very small footprint.</li>
+									<li>
+										Narrow Bezel design to minimize visual impact of using dual displays</li>
+									<li>
+										Unique hinge design for effortless adjustment</li>
+									<li>
+										Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)</li>
+								</ul>
+
+							</div>
+							<div id="tab-review" class="tab-pane fade">
+								<form>
+									<div id="review">
+										<table class="table table-striped table-bordered">
+											<tbody>
+												<tr>
+													<td style="width: 50%;"><strong>Super Administrator</strong></td>
+													<td class="text-right">29/07/2015</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<p>Best this product opencart</p>
+														<div class="ratings">
+															<div class="rating-box">
+																<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+																<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+																<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+																<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+																<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="text-right"></div>
+									</div>
+									<h2 id="review-title">Write a review</h2>
+									<div class="contacts-form">
+										<div class="form-group"> <span class="icon icon-user"></span>
+											<input type="text" name="name" class="form-control" value="Your Name" onblur="if (this.value == '') {this.value = 'Your Name';}" onfocus="if(this.value == 'Your Name') {this.value = '';}">
+										</div>
+										<div class="form-group"> <span class="icon icon-bubbles-2"></span>
+											<textarea class="form-control" name="text" onblur="if (this.value == '') {this.value = 'Your Review';}" onfocus="if(this.value == 'Your Review') {this.value = '';}">Your Review</textarea>
+										</div>
+										<span style="font-size: 11px;"><span class="text-danger">Note:</span>						HTML is not translated!</span>
+
+										<div class="form-group">
+										 <b>Rating</b> <span>Bad</span>&nbsp;
+										<input type="radio" name="rating" value="1"> &nbsp;
+										<input type="radio" name="rating"
+										value="2"> &nbsp;
+										<input type="radio" name="rating"
+										value="3"> &nbsp;
+										<input type="radio" name="rating"
+										value="4"> &nbsp;
+										<input type="radio" name="rating"
+										value="5"> &nbsp;<span>Good</span>
+
+										</div>
+										<div class="buttons clearfix"><a id="button-review" class="btn buttonGray">Continue</a></div>
+									</div>
+								</form>
+							</div>
+							<div id="tab-4" class="tab-pane fade">
+								<a href="#">Monitor</a>,
+								<a href="#">Apple</a>
+							</div>
+							<div id="tab-5" class="tab-pane fade">
+								<p>Lorem ipsum dolor sit amet, consetetur
+									sadipscing elitr, sed diam nonumy eirmod
+									tempor invidunt ut labore et dolore
+									magna aliquyam erat, sed diam voluptua.
+									At vero eos et accusam et justo duo
+									dolores et ea rebum. Stet clita kasd
+									gubergren, no sea takimata sanctus est
+									Lorem ipsum dolor sit amet. Lorem ipsum
+									dolor sit amet, consetetur sadipscing
+									elitr, sed diam nonumy eirmod tempor
+									invidunt ut labore et dolore magna aliquyam
+									erat, sed diam voluptua. </p>
+								<p>At vero eos et accusam et justo duo dolores
+									et ea rebum. Stet clita kasd gubergren,
+									no sea takimata sanctus est Lorem ipsum
+									dolor sit amet. Lorem ipsum dolor sit
+									amet, consetetur sadipscing elitr.</p>
+								<p>Sed diam nonumy eirmod tempor invidunt
+									ut labore et dolore magna aliquyam erat,
+									sed diam voluptua. At vero eos et accusam
+									et justo duo dolores et ea rebum. Stet
+									clita kasd gubergren, no sea takimata
+									sanctus est Lorem ipsum dolor sit amet.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Product Tabs -->
+
+				<!-- Related Products -->
+
+                <!-- end Related  Products-->
+
+
+
+
+			</div>
+			<!--Middle Part End-->
+			<!--Left Part Start -->
+			<aside class="col-sm-4 col-md-3 content-aside" id="column-left">
+			  <div class="module category-style">
+                	<h3 class="modtitle">Categories</h3>
+                	<div class="modcontent">
+                		<div class="box-category">
+                			<ul id="cat_accordion" class="list-group">
+                				<li class="hadchild"><a href="category.html" class="cutom-parent">Smartphone & Tablets</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                					<ul style="display: block;">
+                						<li><a href="category.html">Men's Watches</a></li>
+                						<li><a href="category.html">Women's Watches</a></li>
+                						<li><a href="category.html">Kids' Watches</a></li>
+                						<li><a href="category.html">Accessories</a></li>
+                					</ul>
+                				</li>
+                				<li class="hadchild"><a class="cutom-parent" href="category.html">Electronics</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                					<ul style="display: none;">
+                						<li><a href="category.html">Cycling</a></li>
+                						<li><a href="category.html">Running</a></li>
+                						<li><a href="category.html">Swimming</a></li>
+                						<li><a href="category.html">Football</a></li>
+                						<li><a href="category.html">Golf</a></li>
+                						<li><a href="category.html">Windsurfing</a></li>
+                					</ul>
+                				</li>
+                				<li class="hadchild"><a href="category.html" class="cutom-parent">Shoes</a>   <span class="button-view  fa fa-plus-square-o"></span>
+                					<ul style="display: none;">
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                					</ul>
+                				</li>
+                				<li class="hadchild"><a href="category.html" class="cutom-parent">Watches</a>  <span class="button-view  fa fa-plus-square-o"></span>
+                					<ul style="display: none;">
+                						<li><a href="category.html">Men's Watches</a></li>
+                						<li><a href="category.html">Women's Watches</a></li>
+                						<li><a href="category.html">Kids' Watches</a></li>
+                						<li><a href="category.html">Accessories</a></li>
+                					</ul>
+                				</li>
+                				<li class="hadchild"><a href="category.html" class="cutom-parent">Jewellery</a>    <span class="button-view  fa fa-plus-square-o"></span>
+                					<ul style="display: none;">
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                						<li><a href="category.html">Sub Categories</a></li>
+                					</ul>
+                				</li>
+                				<li class=""><a href="category.html" class="cutom-parent">Health &amp; Beauty</a>  <span class="dcjq-icon"></span></li>
+                				<li class=""><a href="category.html" class="cutom-parent">Kids &amp; Babies</a>    <span class="dcjq-icon"></span></li>
+                				<li class=""><a href="category.html" class="cutom-parent">Sports</a>  <span class="dcjq-icon"></span></li>
+                				<li class=""><a href="category.html" class="cutom-parent">Home &amp; Garden</a><span class="dcjq-icon"></span></li>
+                				<li class=""><a href="category.html" class="cutom-parent">Wines &amp; Spirits</a>  <span class="dcjq-icon"></span></li>
+                			</ul>
+                		</div>
+
+
+                	</div>
+                </div>
+            </aside>
+            <!--Left Part End -->
+		</div>
+
+	</div>
+	<!-- //Main Container -->
+
+
+	<!-- Footer Container -->
+    <footer class="footer-container typefooter-1">
+            <!--Back To Top-->
+        <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+    </footer>
+    <!-- //end Footer Container -->
+
+</div>
+
+
+	<!-- Cpanel Block -->
+	<div id="sp-cpanel_btn" class="isDown visible-lg">
+	<i class="fa fa-cog"></i>
+</div>
+
+	<!-- Include Libs & Plugins
+	============================================ -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../static/js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="../static/js/slick-slider/slick.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="../static/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../static/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="../static/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="../static/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../static/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery-ui/jquery-ui.min.js"></script>
+
+
+	<!-- Theme files
+	============================================ -->
+	<script type="text/javascript" src="../static/js/themejs/homepage.js"></script>
+	<script type="text/javascript" src="../static/js/lightslider/lightslider.js"></script>
+
+	<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/application.js"></script>
+	<!-- 	 -->
+
+</body>
+</html>

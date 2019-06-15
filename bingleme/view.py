@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+
 def cart(request):
     return render(request,'cart.html')
 
@@ -19,7 +21,7 @@ def order_history(request):
     return render(request,'order-history.html')
 
 def order_information(request):
-    return render(request,'product-v2.html')
+    return render(request,'order-information.html')
 
 def quickview(request):
     return render(request,'quickview.html')
@@ -29,3 +31,6 @@ def register(request):
 
 def login(request):
     return render(request,'login.html')
+
+def product(request):
+    return render(request,"product.html")
