@@ -1,0 +1,526 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- Basic page needs
+    ============================================ -->
+    <title>病了么-添加药品</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="administrator,grounding" />
+    <meta name="description" content="Administrator ground the medicine." />
+    <meta name="author" content="Gorma">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="../static/image/png" href="ico/favicon-16x16.png"/>
+
+
+    <!-- Libs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="../static/css/bootstrap/css/bootstrap.min.css">
+    <link href="../static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../static/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/css/themecss/lib.css" rel="stylesheet">
+    <link href="../static/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="../static/js/minicolors/miniColors.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="../static/css/themecss/so_searchpro.css" rel="stylesheet">
+    <link href="../static/css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-categories.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-listing-tabs.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-category-slider.css" rel="stylesheet">
+    <link href="../static/css/themecss/so-newletter-popup.css" rel="stylesheet">
+
+    <link href="../static/css/footer/footer1.css" rel="stylesheet">
+    <link href="../static/css/header/header1.css" rel="stylesheet">
+    <link id="color_scheme" href="../static/css/theme.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+     <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+         body{font-family:'Poppins', sans-serif;}
+    </style>
+
+</head>
+
+<body class="res layout-1">
+
+
+    <div id="wrapper" class="wrapper-fluid banners-effect-5">
+
+
+    <!-- Header Container  -->
+    <header id="header" class=" typeheader-1">
+
+        <!-- Header Top -->
+        <div class="header-top hidden-compact">
+            <div class="container">
+                <div class="row">
+                    <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">欢迎光临 病了么 哈工大医药店&nbsp&nbsp&nbsp&nbsp<span>身体是学习的本钱</span> </div>
+                        <ul class="top-link list-inline hidden-lg ">
+                            <li class="account" id="my_account">
+                                <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">总价 </span>  <span class="fa fa-caret-down"></span>
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="register.html"><i class="fa fa-user"></i> 注册</a></li><!--注册-->
+                                    <li><a href="login.html"><i class="fa fa-pencil-square-o"></i> 登陆</a></li><!--登陆-->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Header Top -->
+
+        <!-- Header center -->
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="navbar-logo col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <div class="logo"><a href="index.html"><img src="../static/image/catalog/logo.png" title="Your Store" alt="Your Store"  /></a></div>
+                    </div>
+                    <!-- //end Logo -->
+
+
+                    <!-- Search -->
+                    <div class="col-lg-7 col-md-6 col-sm-5">
+                        <div class="search-header-w">
+                            <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+
+                            <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
+                                <form method="GET" action="index.html">
+                                    <div id="search0" class="search input-group form-group">
+                                        <div class="select_category filter_type  icon-select hidden-sm hidden-xs">
+                                            <select class="no-border" name="category_id">
+                                                <option value="0">全部分类</option>
+                                                <option value="78">清热解毒</option>
+                                                <option value="77">外用</option>
+                                                <option value="82">中成药</option>
+                                                <option value="80">肝胆肠胃</option>
+                                                <option value="81">心脑血管</option>
+                                                <option value="79">处方药</option>
+                                                <option value="20">养生药品</option>
+                                                <option value="76">中药药品</option>
+                                                <option value="26">保健仪器</option>
+                                            </select>
+                                        </div>
+
+                                        <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Keyword here..." name="search">
+
+                                        <button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
+
+                                    </div>
+                                    <input type="hidden" name="route" value="product/search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //end Search -->
+                    <div class="middle-right col-lg-3 col-md-3 col-sm-3">
+                        <!--cart-->
+                        <div class="shopping_cart">
+                            <div id="cart" class="btn-shopping-cart">
+
+                                <a data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <div class="shopcart">
+                                        <span class="icon-c">
+                                <i class="fa fa-shopping-bag"></i>
+                              </span>
+                                        <div class="shopcart-inner">
+                                            <p class="text-shopping-cart">
+
+                                                俺滴购物车
+                                            </p>
+
+                                            <span class="total-shopping-cart cart-total-full">
+                                   <span class="items_cart">02</span><span class="items_cart2"> item(s)</span><span class="items_carts">( $160.00 )</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <ul class="dropdown-menu pull-right shoppingcart-box" role="menu">
+                                    <li>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="../static/image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Yutculpa ullamco</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$80.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" style="width:70px">
+                                                        <a href="product.html">
+                                                            <img src="../static/image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
+                                                        </a>
+                                                    </td>
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Xancetta bresao</a>
+                                                    </td>
+                                                    <td class="text-center">x1</td>
+                                                    <td class="text-center">$60.00</td>
+                                                    <td class="text-right">
+                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td class="text-left"><strong>总价：</strong>
+                                                        </td>
+                                                        <td class="text-right">$160.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-right"> <a class="btn view-cart" href="cart.html"><i class="fa fa-shopping-cart"></i>查看购物车</a>&nbsp;&nbsp;&nbsp; <a class="btn btn-mega checkout-cart" href="checkout.html"><i class="fa fa-share"></i>结算</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--//cart-->
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- //Header center -->
+
+        <!-- Header Bottom -->
+        <div class="header-bottom hidden-compact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="bottom1 menu-vertical col-lg-2 col-md-3 col-sm-3">
+                        <div class="responsive so-megamenu megamenu-style-dev ">
+                            <div class="so-vertical-menu ">
+                                <nav class="navbar-default">
+
+                                    <div class="container-megamenu vertical">
+                                        <div id="menuHeading">
+                                            <div class="megamenuToogle-wrapper">
+                                                <div class="megamenuToogle-pattern">
+                                                    <div class="container">
+                                                        <div>
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </div>
+                                                        全部分类
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div  style="min-height: 37px" class="navbar-header">
+                                            <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
+                                                <i class="fa fa-bars"></i>
+                                                <span>  分类     </span>
+                                            </button>
+                                        </div>
+                                        <div class="vertical-wrapper" >
+                                            <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                            <div class="megamenu-pattern">
+                                                <div class="container-mega">
+                                                    <ul class="megamenu">
+                                                        <li class="item-vertical  with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico10.png" alt="icon">
+                                                                <span>清热解毒</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico1.png" alt="icon">
+                                                                <span>外用</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical  style1 with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <span class="label"></span>
+                                                                <img src="../static/image/catalog/menu/icons/ico9.png" alt="icon">
+                                                                <span>中成药</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico7.png" alt="icon">
+                                                                <span>肝胆肠胃</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical css-menu with-sub-menu hover">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+
+                                                                 <img src="../static/image/catalog/menu/icons/ico6.png" alt="icon">
+                                                                <span>心脑血管</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico5.png" alt="icon">
+                                                                <span>处方药</span>
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico4.png" alt="icon">
+                                                                <span>养生药品</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical">
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                 <img src="../static/image/catalog/menu/icons/ico3.png" alt="icon">
+                                                                <span>中药药材</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item-vertical" >
+                                                            <p class="close-menu"></p>
+                                                            <a href="#" class="clearfix">
+                                                                <img src="../static/image/catalog/menu/icons/ico2.png" alt="icon">
+                                                                <span>保健仪器</span>
+                                                            </a>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Main menu -->
+
+                    </div>
+                    <!-- //end Main menu -->
+
+                    <div class="bottom3">
+                        <div class="telephone hidden-xs hidden-sm hidden-md">
+                            <ul class="blank">
+                                <li><a href="#"><i class="fa fa-truck"></i>查看历史订单</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square"></i>电话热线： (+123)4 567 890</a></li>
+                            </ul>
+                        </div>
+                        <div class="signin-w hidden-md hidden-sm hidden-xs">
+                            <ul class="signin-link blank">
+                                <li class="log login"><i class="fa fa-lock"></i> <a class="link-lg" href="login.html">登陆 </a> 或者 <a href="register.html">注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </header>
+    <!-- //Header Container  -->
+
+
+	<!-- Main Container  -->
+	<div class="main-container container">
+		<ul class="breadcrumb">
+			<li><a href="#"><i class="fa fa-home"></i></a></li>
+			<li><a href="#">上架药品</a></li>
+		</ul>
+
+		<div class="row">
+			<!--Middle Part Start-->
+			<div id="content" class="col-sm-9">
+				<h2 class="title">上架药品</h2>
+				<p>输入上架药品的详细信息。</p>
+
+				<form class="form-horizontal">
+					<div class="form-group required">
+						<label for="input-medicine-name" class="col-sm-2 control-label">药品名称</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-name" value="" name="medicine_name">
+						</div>
+					</div>
+					<div class="form-group required">
+
+						<label for="input-medicine-category" class="col-sm-2 control-label">药品类别</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="input-medicine-category">
+                                <option value ="中药">中药</option>
+                                <option value ="西药">西药</option>
+                            </select>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label for="input-medicine-brand" class="col-sm-2 control-label">品　　牌</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-brand" value="" name="medicine_brand">
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="input-medicine_specification" class="col-sm-2 control-label">规　　格</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine_specification" value="" name="medicine_specification">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-manufacturer" class="col-sm-2 control-label">生产厂商</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-manufacturer" value="" name="medicine-manufacturer">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-approvalnum" class="col-sm-2 control-label">批准文号</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-approvalnum" value="" name="medicine-approvalnum">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-component" class="col-sm-2 control-label">药品成分</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-component" value="" name="medicine-component">
+						</div>
+					</div>
+                    <div class="form-group required">
+						<label for="input-medicine-function" class="col-sm-2 control-label">功能主治</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="input-medicine-function" value="" name="medicine-fuction">
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-sm-2 control-label">产品类型</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label>
+									<input type="radio" value="8" name="prescription"> 处方药
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" value="7" name="prescription"> 非处方药
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label for="input-medicine-description" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="Optional">药品描述</span>
+						</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" id="input-medicine-description" rows="5" cols="40" name="medicine-description"></textarea>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label for="input-medicine-amount" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="药品库存量">库存</span>
+						</label>
+						<div class="col-sm-10">
+							<input type="text" size="5" class="form-control" id="input-medicine-amount" value="" name="amount">
+						</div>
+					</div>
+					<div class="buttons clearfix">
+						<div class="pull-right">我确认上架的药品信息是符合国家法律法规并且准确无误的　
+							<input type="checkbox" value="1" name="agree"> &nbsp;
+							<input type="submit" class="btn btn-primary" value="提交">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--Middle Part End-->
+			<!--Right Part Start -->
+			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
+				<h2 class="subtitle">平台管理</h2>
+				<div class="list-group">
+					<ul class="list-item">
+						<li><a href="grounding.html">上架药品</a>
+						</li>
+						<li><a href="delete.html">下架药品</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<!--Right Part End -->
+		</div>
+	</div>
+	<!-- //Main Container -->
+
+    </div>
+
+
+
+<!-- Include Libs & Plugins
+	============================================ -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../static/js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="../static/js/slick-slider/slick.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/libs.js"></script>
+	<script type="text/javascript" src="../static/js/unveil/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../static/js/countdown/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="../static/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+	<script type="text/javascript" src="../static/js/datetimepicker/moment.js"></script>
+	<script type="text/javascript" src="../static/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery-ui/jquery-ui.min.js"></script>
+
+
+	<!-- Theme files
+	============================================ -->
+
+
+	<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>
+	<script type="text/javascript" src="../static/js/themejs/application.js"></script>
+</body>
+</html>
