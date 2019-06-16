@@ -13,9 +13,9 @@ class User(models.Model):
 
 class Medicine(models.Model):
     price = models.CharField(max_length=10)
-    generalName = models.CharField(max_length=50)
-    pinyin = models.CharField(max_length=50)
-    goodsName = models.CharField(max_length=30)
+    generalName = models.CharField(max_length=100)
+    pinyin = models.CharField(max_length=100)
+    goodsName = models.CharField(max_length=100)
     component = models.CharField(max_length=200)
     character = models.CharField(max_length=300)
     function = models.CharField(max_length=300)
