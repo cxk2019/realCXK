@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 
-
 def cart(request):
     return render(request,'cart.html')
 
@@ -15,7 +14,10 @@ def grounding(request):
     return render(request,'grounding.html')
 
 def index(request):
-    return render(request,'index.html')
+    u=0
+    if 'user' in request.COOKIES:
+        u=request.COOKIES['user']
+    return render(request,'index.html',{"myalert":0})
 
 def order_history(request):
     return render(request,'order-history.html')
@@ -27,7 +29,7 @@ def quickview(request):
     return render(request,'quickview.html')
 
 def register(request):
-    return render(request,'register.html')
+    return render(request,'register.html',{"myalert":0})
 
 def login(request):
     return render(request,'login.html')
