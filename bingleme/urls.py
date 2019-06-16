@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from . import view
+from . import view,user_register
 urlpatterns = [
     url(r'^$', view.index),
     url(r'^cart$', view.cart),
@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^quickview$', view.quickview),
     url(r'^register$', view.register),
     url(r'^login$', view.login),
-    url(r'^product$', view.product)
+    url(r'^product$', view.product),
+    url(r'^user_register$', user_register.user_register)
 ]
