@@ -19,6 +19,7 @@ from django.conf.urls import url
 from . import view,user_register
 urlpatterns = [
     url(r'^$', view.index),
+    url(r'^index$', view.index),
     url(r'^cart$', view.cart),
     url(r'^category$', view.category),
     url(r'^delete$', view.delete),

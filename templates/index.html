@@ -130,7 +130,6 @@
                         </div>
                     </div>
                     <!-- //end Search -->
-                    <div class="hidden">{{ user }}</div>
                     <div class="middle-right col-lg-3 col-md-3 col-sm-3">
                         <!--cart-->
                         <div class="shopping_cart">
@@ -363,7 +362,7 @@
                         <div class="signin-w hidden-md hidden-sm hidden-xs">
                             <ul class="signin-link blank">
                                 {% if 'user' in request.COOKIES %}
-                                    <li class="log login"><i class="fa fa-lock"></i>欢迎！<a class="link-lg" href="login">{{ request.COOKIES.user }}</a></li>
+                                    <li class="log login"><i class="fa fa-lock"></i>欢迎！<a class="link-lg" href="#">{{ request.COOKIES.user }}</a></li>
                                 {% else %}
                                      <li class="log login"><i class="fa fa-lock"></i> <a class="link-lg" href="login">登陆 </a> 或者 <a href="register">注册</a></li>
                                 {% endif %}
