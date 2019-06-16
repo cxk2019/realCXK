@@ -30,25 +30,25 @@ class Medicine(models.Model):
     termOfValidity = models.CharField(max_length=20)
     approvalNumber = models.CharField(max_length=30)
     enterpriseName = models.CharField(max_length=50)
+    category = models.IntegerField()
 
-class Order():
+class Order(models.Model):
     place_time = models.DateTimeField(default=timezone.now)
     medicine_id = models.ForeignKey('Medicine', on_delete=models.CASCADE)
-    number = models.IntegerField(max_length=10)
+    number = models.IntegerField()
     state = models.CharField(max_length=10)
     pay_mode = models.CharField(max_length=20)
     dis_mode = models.CharField(max_length=20)
-    user_id = models.ForeignKey('User')
-    # user_id = models.ForeignKey('User',on_delete=models.CASCADE)
+    user_id = models.ForeignKey('User',on_delete=models.CASCADE)
     del_time = models.DateTimeField(default=timezone.now)
     rec_time = models.DateTimeField(default=timezone.now)
     acc_time = models.DateTimeField(default=timezone.now)
 
 class ImageMedicine(models.Model):
     imageUrl=models.CharField(max_length=60)
-    medicineID=models.ForeignKey('Medicine')
+    medicineID=models.ForeignKey('Medicine',on_delete=models.CASCADE)
 
 class Cart(models.Model):
-    user = models.ForeignKey('User')
-    medicine = models.ForeignKey('Medicine')
+    user = models.ForeignKey('User',on_delete=models.CASCADE)
+    medicine = models.ForeignKey('Medicine',on_delete=models.CASCADE)
     number = models.IntegerField()
