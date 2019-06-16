@@ -18,5 +18,15 @@ from django.urls import path
 from django.conf.urls import url
 from . import view
 urlpatterns = [
-    url(r'^$', view.login),
+    url(r'^$', view.index),
+    url(r'^cart$', view.cart),
+    url(r'^category$', view.category),
+    url(r'^delete$', view.delete),
+    url(r'^grounding$', view.grounding),
+    url(r'^order_history$', view.order_history),
+    url(r'^order_information$', view.order_information),
+    url(r'^quickview$', view.quickview),
+    url(r'^register$', view.register),
+    url(r'^login$', view.login),
+    url(r'^product$', view.product)
 ]
