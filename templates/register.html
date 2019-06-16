@@ -382,7 +382,7 @@
 			<div id="content" class="col-sm-12">
 				<h2 class="title">注册账号</h2>
 				<p>如果你已拥有一个账号，请点击此处进入 <a href="#">登录界面</a>.</p>
-				<form action="" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+				<form action="/user_register" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
                     <fieldset>
 						<legend>账号信息</legend>
                         <div class="form-group required">
@@ -434,39 +434,9 @@
 							</div>
 						</div>
 						<div class="form-group required">
-							<label class="col-sm-2 control-label" for="input-address-telephone">联系电话</label>
-							<div class="col-sm-10">
-								<input type="tel" name="address-telephone" value="" placeholder="联系电话" id="input-address-telephone" class="form-control">
-							</div>
-						</div>
-						<div class="form-group required">
 							<label class="col-sm-2 control-label" for="input-postcode">邮政编码</label>
 							<div class="col-sm-10">
 								<input type="text" name="postcode" value="" placeholder="邮政编码" id="input-postcode" class="form-control">
-							</div>
-						</div>
-						<div class="form-group required">
-							<label class="col-sm-2 control-label" for="input-province">省份</label>
-							<div class="col-sm-10">
-								<select name="province_id" id="input-province" class="form-control">
-									<option value=""> --- 请选择省份 --- </option>
-									<option value="244">北京</option>
-									<option value="1">上海</option>
-									<option value="2">天津</option>
-									<option value="3">山东</option>
-								</select>
-							</div>
-						</div>
-                        <div class="form-group required">
-							<label class="col-sm-2 control-label" for="input-city">城市</label>
-							<div class="col-sm-10">
-								<select name="city_id" id="input-city" class="form-control">
-									<option value=""> --- 请选择城市 --- </option>
-									<option value="244">济南</option>
-									<option value="1">青岛</option>
-									<option value="2">烟台</option>
-									<option value="3">威海</option>
-								</select>
 							</div>
 						</div>
 					</fieldset>
