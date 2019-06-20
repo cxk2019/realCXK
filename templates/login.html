@@ -386,13 +386,13 @@
 						<div class="row">
 
 
-							<form action="#" method="post" enctype="multipart/form-data">
+							<form action="user_login" method="post" enctype="multipart/form-data">
 								<div class="col-sm-12 customer-login">
 									<div class="well">
 										<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> 用户登录</h2>
 										<div class="form-group">
 											<label class="control-label " for="input-email">电子邮箱地址/用户名</label>
-											<input type="text" name="email" value="" id="input-email" class="form-control" />
+											<input type="text" name="user" value="" id="input-email" class="form-control" />
 										</div>
 										<div class="form-group">
 											<label class="control-label " for="input-password">密码</label>
@@ -408,7 +408,12 @@
 
 						</div>
 					</div>
-
+<div class="hidden">{{ myalert }}</div>
+                {% if myalert %}
+        <script>
+                alert('{{ myalert }}');
+        </script>
+    {% endif %}
 				</div>
 			</div>
 		</div>

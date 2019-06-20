@@ -17,7 +17,9 @@ def index(request):
     u=0
     if 'user' in request.COOKIES:
         u=request.COOKIES['user']
-    return render(request,'index.html',{"myalert":0})
+    print("wocao")
+    print(u)
+    return render(request,'index.html',{"myuser":u,"myalert":0})
 
 def order_history(request):
     return render(request,'order-history.html')

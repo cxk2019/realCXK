@@ -14,7 +14,7 @@ def user_register(request):
               ,realName=request.POST['firstname'],address=request.POST['address_1'],
               email=request.POST['email'],postalCode=request.POST['postcode'])
         user.save()
-        response=render(request,'index.html',{"myalert":"注册成功！"})
+        response=render(request,'index.html',{"myuser":request.POST['user'],"myalert":"注册成功！"})
         response.set_cookie('user', request.POST['user'],max_age=604800)
         return response
     except Exception as e:

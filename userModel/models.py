@@ -30,7 +30,7 @@ class Medicine(models.Model):
     termOfValidity = models.CharField(max_length=100)
     approvalNumber = models.CharField(max_length=100)
     enterpriseName = models.CharField(max_length=100)
-    category = models.IntegerField()
+    classfication=models.CharField(max_length=100)
 
 class Order(models.Model):
     placeTime = models.DateTimeField(default=timezone.now)

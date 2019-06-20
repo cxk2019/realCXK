@@ -360,9 +360,10 @@
                         </div>
 
                         <div class="signin-w hidden-md hidden-sm hidden-xs">
+                            <div class="hidden">{{ myuser }}</div>
                             <ul class="signin-link blank">
-                                {% if 'user' in request.COOKIES %}
-                                    <li class="log login"><i class="fa fa-lock"></i>欢迎！<a class="link-lg" href="#">{{ request.COOKIES.user }}</a></li>
+                                {% if myuser %}
+                                    <li class="log login"><i class="fa fa-lock"></i>欢迎！<a class="link-lg" href="#">{{ myuser }}</a></li>
                                 {% else %}
                                      <li class="log login"><i class="fa fa-lock"></i> <a class="link-lg" href="login">登陆 </a> 或者 <a href="register">注册</a></li>
                                 {% endif %}
