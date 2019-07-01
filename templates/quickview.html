@@ -54,11 +54,10 @@
 </head>
 
  <body class="res layout-subpage">
-
+{% load base %}
      <div id="wrapper" class="wrapper-full ">
 	<!-- Main Container  -->
 	 <div class="main-container container">
-
 		 <div class="row">
 			 <!--Middle Part Start-->
 			 <div id="content" class="col-md-12 col-sm-12">
@@ -68,61 +67,39 @@
 
 						<div class="content-product-left class-honizol col-md-5 col-sm-12 col-xs-12">
 							<div class="large-image  ">
-								<img itemprop="image" class="product-image-zoom" src="../static/image/medicine/b_1_1.jpg" data-zoom-image="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
+								<img itemprop="image" class="product-image-zoom" src="../static/image/medicine/b_{{ item|get_item:"id" }}_1.jpg" data-zoom-image="../static/image/medicine/b_{{ item|get_item:"id" }}_1.jpg" title="{{ item|get_item:"generalName" }}" alt="{{ item|get_item:"generalName" }}">
 							</div>
 							<a class="thumb-video pull-left" href="https://www.youtube.com/watch?v=HhabgvIIXik"><i class="fa fa-youtube-play"></i></a>
 
 							<div id="thumb-slider" class="yt-content-slider full_slider owl-drag"  data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="10" data-items_column0="4" data-items_column1="3" data-items_column2="4"  data-items_column3="1" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
-								<a data-index="0" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/1.jpg" title="999感冒灵颗粒">
-									<img src="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
+								{% for row in result %}
+                                <a data-index="{{forloop.counter}}" class="img thumbnail " data-image="../static/image/medicine/b_{{ item|get_item:"id" }}_{{ forloop.counter }}.jpg" title="{{ item|get_item:"generalName" }}">
+									<img src="../static/image/medicine/b_{{ item|get_item:"id" }}_{{ forloop.counter }}.jpg" title="{{ item|get_item:"generalName" }}" alt="{{ item|get_item:"generalName" }}">
 								</a>
-								<a data-index="1" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/2.jpg" title="999感冒灵颗粒">
-									<img src="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
-								</a>
-								<a data-index="2" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/3.jpg" title="999感冒灵颗粒">
-									<img src="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
-								</a>
-								<a data-index="3" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/4.jpg" title="999感冒灵颗粒">
-									<img src="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
-								</a>
-								<a data-index="4" class="img thumbnail " data-image="../static/image/catalog/demo/product/fashion/5.jpg" title="999感冒灵颗粒">
-									<img src="../static/image/medicine/b_1_1.jpg" title="999感冒灵颗粒" alt="999感冒灵颗粒">
-								</a>
+                                {% endfor %}
 							</div>
 
 						</div>
 
 						<div class="content-product-right col-md-7 col-sm-12 col-xs-12">
 							<div class="title-product">
-								<h1>999感冒灵颗粒</h1>
+								<h1>{{ item|get_item:"generalName" }}</h1>
 							</div>
-							<!-- Review ---->
-							<div class="box-review form-group">
-								<div class="ratings">
-									<div class="rating-box">
-										<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-									</div>
-								</div>
 
-								</div>
 
 							<div class="product-label form-group">
 								<div class="product_page_price price" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
-									<span class="price-new" itemprop="price">$114.00</span>
+									<span class="price-new" itemprop="price">￥{{ item|get_item:"price" }}</span>
 								</div>
 								
 							</div>
 
 							<div class="product-box-desc">
 								<div class="inner-box-desc">
-									<div class="price-tax"><span>组成:</span> 岗梅、三叉苦、金盏银盘、野菊花、薄荷油、咖啡因、马来酸氯苯那敏、对乙酰氨基酚。辅料为滑石粉。</div>
-                                    <div class="price-tax"><span>特性:</span> 本品为胶囊剂，内容物为棕褐色的颗粒；味苦。</div>
-                                    <div class="price-tax"><span>规格:</span> 10g*9包/盒</div>
-                                    <div class="price-tax"><span>功能主治:</span> 解热镇痛。用于感冒引起的头痛，发热，鼻塞，流涕，咽痛。</div>
+									<div class="price-tax"><span>组成:</span> {{ item|get_item:"component" }}</div>
+                                    <div class="price-tax"><span>特性:</span> {{ item|get_item:"character" }}</div>
+                                    <div class="price-tax"><span>规格:</span> {{ item|get_item:"specification" }}</div>
+                                    <div class="price-tax"><span>功能主治:</span> {{ item|get_item:"function" }}</div>
 								</div>
 							</div>
 
@@ -132,19 +109,21 @@
 
 
 								<div class="form-group box-info-product">
+                                    <form name="add" method="POST" action="/cart_add">
 									<div class="option quantity">
 										<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
 											<label>数量</label>
 											<input class="form-control" type="text" name="quantity"
 											value="1">
-											<input type="hidden" name="product_id" value="50">
+											<input type="hidden" name="product_id" value="{{ item|get_item:"id" }}">
 											<span class="input-group-addon product_quantity_down">−</span>
 											<span class="input-group-addon product_quantity_up">+</span>
 										</div>
 									</div>
 									<div class="cart">
-										<input type="button" data-toggle="tooltip" title="" value="加入购物车" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg"  data-original-title="加入购物车">
+										<input type="submit" data-toggle="tooltip" title="" value="加入购物车" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg"  data-original-title="加入购物车">
 									</div>
+                                    </form>
 									<div class="add-to-links wish_comp">
 										<ul class="blank list-inline">
 
@@ -165,18 +144,18 @@
 					// Cart add remove functions
 					var cart = {
 						'add': function(product_id, quantity) {
-							parent.addProductNotice('加入购物车', '<img src="../static/image/medicine/b_1_1.jpg" alt="">', '<h3><a href="#">999感冒灵"</a> 加入 <a href="#">购物车</a>!</h3>', 'success');
+							parent.addProductNotice('加入购物车', '<img src="../static/image/medicine/b_{{ item|get_item:"id" }}_1.jpg" alt="">', '<h3><a href="#">999感冒灵"</a> 加入 <a href="#">购物车</a>!</h3>', 'success');
 						}
 					}
 
 					var wishlist = {
 						'add': function(product_id) {
-							parent.addProductNotice('Product added to Wishlist', '<img src="../static/image/medicine/b_1_1.jpg" alt="">', '<h3>You must <a href="#">login</a>  to save <a href="#">999感冒灵"</a> 添加到 <a href="#">购物车</a>!</h3>', 'success');
+							parent.addProductNotice('Product added to Wishlist', '<img src="../static/image/medicine/b_{{ item|get_item:"id" }}_1.jpg" alt="">', '<h3>You must <a href="#">login</a>  to save <a href="#">999感冒灵"</a> 添加到 <a href="#">购物车</a>!</h3>', 'success');
 						}
 					}
 					var compare = {
 						'add': function(product_id) {
-							parent.addProductNotice('Product added to compare', '<img src="../static/image/medicine/b_1_1.jpg" alt="">', '<h3>Success: You have added <a href="#">999感冒灵"</a> 添加到 <a href="#">product comparison</a>!</h3>', 'success');
+							parent.addProductNotice('Product added to compare', '<img src="../static/image/medicine/b_{{ item|get_item:"id" }}_1.jpg" alt="">', '<h3>Success: You have added <a href="#">999感冒灵"</a> 添加到 <a href="#">product comparison</a>!</h3>', 'success');
 						}
 					}
 

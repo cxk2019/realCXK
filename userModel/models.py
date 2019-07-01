@@ -10,6 +10,7 @@ class User(models.Model):
     email = models.CharField(max_length=100)
     postalCode = models.CharField(max_length=10)
     regtime = models.DateTimeField(default=timezone.now)  # 缺省值是当前时间
+    isAdmin = models.CharField(max_length=2)
 
 class Medicine(models.Model):
     price = models.CharField(max_length=10)
@@ -31,15 +32,19 @@ class Medicine(models.Model):
     approvalNumber = models.CharField(max_length=100)
     enterpriseName = models.CharField(max_length=100)
     classfication=models.CharField(max_length=100)
+    hide = models.CharField(max_length=100, default='可见')
 
 class Order(models.Model):
-    placeTime = models.DateTimeField(default=timezone.now)
     medicineID = models.ForeignKey('Medicine', on_delete=models.CASCADE)
     number = models.IntegerField()
+    realOrderID = models.ForeignKey('RealOrder', on_delete=models.CASCADE)
+
+class RealOrder(models.Model):
+    placeTime = models.DateTimeField(default=timezone.now)
     state = models.CharField(max_length=10)
     payMode = models.CharField(max_length=20)
     disMode = models.CharField(max_length=20)
-    userID = models.ForeignKey('User',on_delete=models.CASCADE)
+    userID = models.ForeignKey('User', on_delete=models.CASCADE)
     delTime = models.DateTimeField(default=timezone.now)
     recTime = models.DateTimeField(default=timezone.now)
     accTime = models.DateTimeField(default=timezone.now)

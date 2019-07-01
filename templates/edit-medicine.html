@@ -5,7 +5,7 @@
 
     <!-- Basic page needs
     ============================================ -->
-    <title>病了么-添加药品</title>
+    <title>病了么-修改药品</title>
     <meta charset="utf-8">
     <meta name="keywords" content="administrator,grounding" />
     <meta name="description" content="Administrator ground the medicine." />
@@ -49,7 +49,6 @@
      <!-- Google web fonts
     ============================================ -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
-
     <style type="text/css">
          body{font-family:'Poppins', sans-serif;}
     </style>
@@ -264,149 +263,179 @@
     </header>
     <!-- //Header Container  -->
 
+
 	<!-- Main Container  -->
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="/admin"><i class="fa fa-home"></i></a></li>
-			<li>上架药品</li>
+			<li>修改药品</li>
 		</ul>
-
 		<div class="row">
 			<!--Middle Part Start-->
 			<div id="content" class="col-sm-9">
-				<h2 class="title">上架药品</h2>
-				<p>输入上架药品的详细信息。</p>
-				<form action="/grounding/" method="post" enctype="multipart/form-data" class="form-horizontal">
+				<h2 class="title">修改药品</h2>
+				<p>修改药品的详细信息。</p>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                     <tr>
+                        <td class="text-center">药品图片</td>
+                         <td class="text-center">是否删除</td>
+                    </tr>
+                    </thead>
+                <tbody>
+                    {% for img in imglist %}
+                    <tr>
+                        <td class="text-center">
+                            <img width="85" class="img-thumbnail" alt="medicineimage" src="../static/image/medicine/{{ img.imgurl }}">
+                        </td>
+                        <td class="text-center">
+                            <form action="/delete_image/" method="get">
+                                <input type="hidden" value="{{ img.imgurl }}" name="imgUrl">
+                                <input type="hidden" value="{{ img.mid }}" name="medicineId">
+                                <input type="submit" width="200px" title="" class="btn btn-primary" value="删除">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+				<form method="post" action="/edit_medicine/" enctype="multipart/form-data" class="form-horizontal">
                     <div class="form-group">
-						<label for="input-medicine-image" class="col-sm-2 control-label">药品图片</label>
+						<label for="input-medicine-image" class="col-sm-2 control-label">上传图片</label>
 						<div class="col-sm-10">
-							 <input name="medicine_image" type="file" class="image" multiple="" accept="image/jpeg" id="input-medicine-image">
-					    </div>
-                    </div>
+							 <input name="medicine_image" type="file" multiple="" class="image" accept=".jpg">
+						</div>
+					</div>
 					<div class="form-group required">
 						<label for="input-medicine-name" class="col-sm-2 control-label">药品名称</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-name" value="" name="medicine_name">
+							<input type="text" class="form-control" id="input-medicine-name"  name="medicine_name" value="{{ mname }}">
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-pinyin" class="col-sm-2 control-label">汉语拼音</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-pinyin" value="" name="medicine_pinyin">
+							<input type="text" class="form-control" id="input-medicine-pinyin" name="medicine_pinyin" value="{{ mpinyin }}" >
 						</div>
 					</div>
 					<div class="form-group required">
 						<label for="input-medicine-category" class="col-sm-2 control-label">药品类别</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-category" value="" name="medicine_category">
+							<input type="text" class="form-control" id="input-medicine-category" name="medicine_category" value="{{ mclass }}">
 						</div>
 					</div>
 
 					<div class="form-group required">
 						<label for="input-medicine-brand" class="col-sm-2 control-label">品牌名称</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-brand" value="" name="medicine_brand">
+							<input type="text" class="form-control" id="input-medicine-brand" name="medicine_brand" value="{{ mgoodsname }}">
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-component" class="col-sm-2 control-label">药品成分</label>
 						<div class="col-sm-10">
-                            <textarea  rows="5" cols="40" class="form-control" id="input-medicine-component" value="" name="medicine_component"></textarea>
+                            <textarea  rows="5" cols="40" class="form-control" id="input-medicine-component" name="medicine_component">{{ mcomponent }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-character" class="col-sm-2 control-label">药品性状</label>
 						<div class="col-sm-10">
-							<textarea  rows="5" cols="40" class="form-control" id="input-medicine-character" value="" name="medicine_character"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-approvalnum" name="medicine_character">{{ mcharacter }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-function" class="col-sm-2 control-label">功能主治</label>
 						<div class="col-sm-10">
-							<textarea type="text"  rows="5" cols="40" class="form-control" id="input-medicine-function" value="" name="medicine_function"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-function" name="medicine_function">{{ mfunction }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine_specification" class="col-sm-2 control-label">规　　格</label>
 						<div class="col-sm-10">
-							<textarea  rows="3" cols="40" class="form-control" id="input-medicine-specification" value="" name="medicine_specification"></textarea>
+                            <textarea  rows="3" cols="40" type="text" class="form-control" id="input-medicine-specification"  name="medicine_specification">{{ mspecification }}</textarea>
 						</div>
 					</div>
                      <div class="form-group required">
 						<label for="input-medicine-usage" class="col-sm-2 control-label">用法用量</label>
 						<div class="col-sm-10">
-							<textarea rows="5" cols="40" class="form-control" id="input-medicine-usage" value="" name="medicine_usage"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-usage"  name="medicine_usage">{{ musage }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-react" class="col-sm-2 control-label">不良反应</label>
 						<div class="col-sm-10">
-							<textarea  rows="5" cols="40" class="form-control" id="input-medicine-react" value="" name="medicine_react"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-react"  name="medicine_react">{{ mreact }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-contraindication" class="col-sm-2 control-label">禁　　忌</label>
 						<div class="col-sm-10">
-							<textarea type="text"  rows="5" cols="40" class="form-control" id="input-medicine-contraindication" value="" name="medicine_contraindication"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-contraindication" name="medicine_contraindication">{{ mcontraindication }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-attention" class="col-sm-2 control-label">注意事项</label>
 						<div class="col-sm-10">
-							<textarea type="text"  rows="5" cols="40" class="form-control" id="input-medicine-attention" value="" name="medicine_attention"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-attention" name="medicine_attention">{{ mattention }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-interaction" class="col-sm-2 control-label">药物相互作用</label>
 						<div class="col-sm-10">
-							<textarea type="text" rows="5" cols="40" class="form-control" id="input-medicine-interaction" value="" name="medicine_interaction"></textarea>
+                            <textarea  rows="5" cols="40" type="text" class="form-control" id="input-medicine-interaction" name="medicine_interaction">{{ minteraction }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-storage" class="col-sm-2 control-label">储存方式</label>
 						<div class="col-sm-10">
-							<textarea type="text"  rows="3" cols="40" class="form-control" id="input-medicine-storage" value="" name="medicine_storage"></textarea>
+                            <textarea  rows="3" cols="40" type="text" class="form-control" id="input-medicine-storage" name="medicine_storage">{{ mstorage }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-package" class="col-sm-2 control-label">包　　装</label>
 						<div class="col-sm-10">
-                            <textarea  rows="3" cols="40" type="text" class="form-control" id="input-medicine-package" value="" name="medicine_package"></textarea>
+                            <textarea  rows="3" cols="40" type="text" class="form-control" id="input-medicine-package" name="medicine_package">{{ mpacking }}</textarea>
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-validterm" class="col-sm-2 control-label">保质期限</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-validterm" value="" name="medicine_validterm">
+							<input type="text" class="form-control" id="input-medicine-validterm" name="medicine_validterm" value="{{ mvalidterm }}">
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-approvalnum" class="col-sm-2 control-label">批准文号</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-approvalnum" value="" name="medicine_approvalnum">
+							<input type="text" class="form-control" id="input-medicine-approvalnum" name="medicine_approvalnum" value="{{ mapprovalnum }}">
 						</div>
 					</div>
                     <div class="form-group required">
 						<label for="input-medicine-manufacturer" class="col-sm-2 control-label">生产厂商</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="input-medicine-manufacturer" value="" name="medicine_manufacturer">
+							<input type="text" class="form-control" id="input-medicine-manufacturer" value="{{ mfacturer}}" name="medicine_manufacturer">
 						</div>
 					</div>
                     <div class="form-group required">
-						<label for="input-medicine-price" class="col-sm-2 control-label"><span title="" data-toggle="tooltip" data-original-title="价格">价格</span>
-						</label>
+						<label for="input-medicine-price" class="col-sm-2 control-label">价格</label>
 						<div class="col-sm-10">
-							<input type="number" size="5" width="20px" step="0.01" class="form-control" id="input-medicine-price" value="" name="medicine_price">
+                            <input type="text" size="5" width="20px" step="0.01" class="form-control" id="input-medicine-price" name="medicine_price" value="{{ mprice }}"  >
+						</div>
+					</div>
+                    <div class="form-group required">
+                        <label for="input-medicine-hide" class="col-sm-2 control-label">是否可见</label>
+						<div class="col-sm-10">
+							<select  class="form-control" id="input-medicine-hide" name="medicine_hide">
+                                <option value = "可见">可见</option>
+                                <option value = "隐藏">隐藏</option>
+                            </select>
 						</div>
 					</div>
 					<div class="buttons clearfix">
-						<div class="pull-right">我确认上架的药品信息是符合国家法律法规并且准确无误的　
-							<input type="checkbox" value="1" name="medicine_agree" id="input-medicine-agree"> &nbsp;
-							<input type="submit" href="/medicine_list" name="submit" class="btn btn-primary" value="提交" onclick="return check()">
+						<div class="pull-right">
+							<input type="submit" href="/medicine_list/" class="btn btn-primary" value="提交" onclick="return check()">
 						</div>
 					</div>
 				</form>
-			</div>
             <script>
                 var name = document.getElementById("input-medicine-name")
                 var pinyin = document.getElementById("input-medicine-pinyin")
@@ -428,27 +457,31 @@
                 var manufacturer = document.getElementById("input-medicine-manufacturer")
                 var price = document.getElementById("input-medicine-price")
                 var agree = document.getElementById("input-medicine-agree")
-                var image = document.getElementById("input-medicine-image")
-                function check(){
-                    if ($("#input-medicine-agree").prop("checked")==false || name.value == "" || pinyin.value == "" || category.value == "" || brand.value == "" || component.value == "" || character.value == "" || functions.value == "" || specification.value == "" || usage.value == "" ||
+
+                function check() {
+                    if (name.value == "" || pinyin.value == "" || category.value == "" || brand.value == "" || component.value == "" || character.value == "" || functions.value == "" || specification.value == "" || usage.value == "" ||
                         react.value == "" || contraindication.value == "" || attention.value == "" || interaction.value == "" || storage.value == "" || package.value == "" || validterm.value == "" || approvalnum.value == "" ||
                         manufacturer.value == "" || price.value == "") {
                         alert("请确认信息完整、准确且合法！")
                         return (false)
+                    } else {
+                    alert("提交成功！")
+                    return (true)
                     }
-                    alert("{{ myalert }}")
-                    return
                 }
             </script>
+
+			</div>
+			</div>
 			<!--Middle Part End-->
 			<!--Right Part Start -->
 			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
 				<h2 class="subtitle">平台管理</h2>
 				<div class="list-group">
 					<ul class="list-item">
-						<li><a href="/edit_medicine">管理药品</a>
+						<li><a href="/grounding">上架药品</a>
 						</li>
-                        <li><a href="/admin_orderlist">订单发货</a>
+						<li><a href="/admin_orderlist">订单发货</a>
 						</li>
 					</ul>
 				</div>
@@ -477,8 +510,10 @@
 	<script type="text/javascript" src="../static/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="../static/js/jquery-ui/jquery-ui.min.js"></script>
 
+
 	<!-- Theme files
 	============================================ -->
+
 
 	<script type="text/javascript" src="../static/js/themejs/so_megamenu.js"></script>
 	<script type="text/javascript" src="../static/js/themejs/addtocart.js"></script>

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from userModel.models import User
 from django.shortcuts import render
+from .user_index_func import checkClassification,getHeatMedicine
 def user_register(request):
     try:
         if (request.POST['password']=='' or request.POST['confirm']==''
@@ -14,7 +15,10 @@ def user_register(request):
               ,realName=request.POST['firstname'],address=request.POST['address_1'],
               email=request.POST['email'],postalCode=request.POST['postcode'])
         user.save()
-        response=render(request,'index.html',{"myuser":request.POST['user'],"myalert":"注册成功！"})
+        classes = checkClassification()
+        h_medicine = getHeatMedicine()
+        response=render(request,'index.html',{"myuser":request.POST['user'],"myalert":"注册成功！","classfication": classes, "h_medicine1": h_medicine[0],
+                                              "h_medicine2": h_medicine[1]})
         response.set_cookie('user', request.POST['user'],max_age=604800)
         return response
     except Exception as e:

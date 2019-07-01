@@ -16,20 +16,36 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from . import view,user_register,user_login
+from . import view,user_register,user_login,search_medicine,classify_medicine,cart_show,\
+    cart_update,cart_add,cart_remove,admin_index,admin_search,edit_medicine,admin_orderlist
 urlpatterns = [
     url(r'^$', view.index),
     url(r'^index$', view.index),
-    url(r'^cart$', view.cart),
+    url(r'^cart$', cart_show.cart_show),
     url(r'^category$', view.category),
-    url(r'^delete$', view.delete),
     url(r'^grounding$', view.grounding),
     url(r'^order_history$', view.order_history),
-    url(r'^order_information$', view.order_information),
-    url(r'^quickview$', view.quickview),
+    url(r'^order_information/$', view.order_information),
+    url(r'^quickview/$', view.quickview),
     url(r'^register$', view.register),
     url(r'^login$', view.login),
-    url(r'^product$', view.product),
+    url(r'^product/$', view.product),
     url(r'^user_register$', user_register.user_register),
-    url(r'^user_login$', user_login.user_login)
+    url(r'^user_login$', user_login.user_login),
+    url(r'^search_medicine$', search_medicine.search_medicine),
+    url(r'^loginOut$', view.loginOut),
+    url(r'^classify_medicine/$', classify_medicine.classify_medicine),
+    url(r'^arrive/$', view.hasArrive),
+    url(r'^pay/$', view.pay),
+    url(r'^newOrder$',view.newOrder),
+    url(r'^cart_update$', cart_update.cart_update),
+    url(r'^cart_add$', cart_add.cart_add),
+    url(r'^cart_remove/$',cart_remove.cart_remove),
+    url(r'^medicine_list/$', view.medicine_list),
+    url(r'^admin$', admin_index.adminIndex),
+    url(r'^admin_search/$',admin_search.admin_search),
+    url(r'^edit_medicine/$', edit_medicine.edit_medicine),
+    url(r'^delete_image/$', view.delete_image),
+    url(r'^admin_orderlist$', admin_orderlist.getAdminOrder),
+
 ]
